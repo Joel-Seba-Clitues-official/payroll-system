@@ -45,4 +45,4 @@ def add_employee():
 
 if __name__ == '__main__':
     init_db()
-    app.run(debug=True, port=5000)  # Change port as needed
+    app.run(debug=True, host='0.0.0.0', port=5000) # Change port as needed
