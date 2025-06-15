@@ -7,12 +7,12 @@ pipeline {
         APP_PORT = '5000'
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/your-username/payroll-system.git' // ← Change this
-            }
-        }
+    // stages {
+    //     stage('Checkout') {
+    //         steps {
+    //             git 'https://github.com/your-username/payroll-system.git' // ← Change this
+    //         }
+    //     }
 
         stage('Build Docker Image') {
             steps {
