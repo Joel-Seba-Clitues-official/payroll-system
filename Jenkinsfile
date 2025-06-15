@@ -7,13 +7,7 @@ pipeline {
         APP_PORT = '5000'
     }
 
-    // stages {
-    //     stage('Checkout') {
-    //         steps {
-    //             git 'https://github.com/your-username/payroll-system.git' // ← Change this
-    //         }
-    //     }
-
+    stages {
         stage('Build Docker Image') {
             steps {
                 script {
@@ -38,10 +32,10 @@ pipeline {
 
     post {
         success {
-            echo "App is running at http://localhost:${APP_PORT}"
+            echo " App is running at http://localhost:${APP_PORT}"
         }
         failure {
-            echo "Pipeline failed!"
+            echo " Pipeline failed!"
         }
     }
 }
